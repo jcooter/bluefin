@@ -130,7 +130,7 @@ build $image="bluefin" $tag="latest" $flavor="main" rechunk="0" ghcr="0" pipelin
     fedora_version=$({{ just }} fedora_version '{{ image }}' '{{ tag }}' '{{ flavor }}' '{{ kernel_pin }}')
 
     # Verify Base Image with cosign
-    {{ just }} verify-container "${base_image_name}-main:${fedora_version}"
+    {{ just }} verify-container "${base_image_name}-main:${fedora_version}" ghcr.io/jcooter https://raw.githubusercontent.com/jcooter/ublue-main/refs/heads/main/cosign.pub
 
     # Kernel Release/Pin
     if [[ -z "${kernel_pin:-}" ]]; then
