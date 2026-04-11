@@ -40,11 +40,7 @@ IMPORTANT_PACKAGES=(
     flatpak
     mutter
     pipewire
-    gnome-shell
-    ptyxis
-    gdm
     systemd
-    tailscale
     uupd
     wireplumber
     zsh
