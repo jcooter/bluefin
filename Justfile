@@ -109,7 +109,7 @@ build $image="bluefin" $tag="latest" $flavor="main" rechunk="0" ghcr="0" pipelin
     brew_image_sha=$(yq -r '.images[] | select(.name == "brew") | .digest' image-versions.yml)
 
     # Base Image
-    base_image_name="silverblue"
+    base_image_name="cosmic"
 
 
     # AKMODS Flavor and Kernel Version
